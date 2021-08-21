@@ -44,9 +44,9 @@ const MainContent = () => {
             <div className="input-wrap">
               <p className="text-input">Sell</p>
               <select className="select-input" name="select" id="">
-                <option value="">{withdr[0].name}</option>
-                <option value="">{withdr[1].name}</option>
-                <option value="">{withdr[2].name}</option>
+                <option value="">{withdr?.[0]?.name}</option>
+                <option value="">{withdr?.[1]?.name}</option>
+                <option value="">{withdr?.[2]?.name}</option>
               </select>
               <input className="input" type="text" placeholder="amount" />
             </div>
@@ -54,9 +54,9 @@ const MainContent = () => {
             <div className="input-wrap">
               <p className="text-input">Buy</p>
               <select className="select-input" name="select" id="">
-                <option value="">{invoice[0].name}</option>
-                <option value="">{invoice[1].name}</option>
-                <option value="">{invoice[2].name}</option>
+                <option value="">{invoice?.[0]?.name}</option>
+                <option value="">{invoice?.[1]?.name}</option>
+                <option value="">{invoice?.[2]?.name}</option>
               </select>
               <input className="input" type="text" placeholder="amount" />
             </div>
