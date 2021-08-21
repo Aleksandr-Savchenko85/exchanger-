@@ -9,8 +9,6 @@ const MainContent = () => {
   const invoice = methods[0]?.invoice;
   const withdr = methods[0]?.withdraw;
 
-  console.log(invoice[0]?.name);
-
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(getMethod());
@@ -46,14 +44,9 @@ const MainContent = () => {
             <div className="input-wrap">
               <p className="text-input">Sell</p>
               <select className="select-input" name="select" id="">
-                <option value="">{invoice[0]?.name}</option>
-                <option value="">{invoice[1]?.name}</option>
-                <option value="">{invoice[2]?.name}</option>
-                <option value="">{invoice[3]?.name}</option>
-                <option value="">{invoice[4]?.name}</option>
-                <option value="">{invoice[5]?.name}</option>
-                <option value="">{invoice[6]?.name}</option>
-                <option value="">{invoice[7]?.name}</option>
+                <option value="">{withdr[0].name}</option>
+                <option value="">{withdr[1].name}</option>
+                <option value="">{withdr[2].name}</option>
               </select>
               <input className="input" type="text" placeholder="amount" />
             </div>
@@ -61,13 +54,9 @@ const MainContent = () => {
             <div className="input-wrap">
               <p className="text-input">Buy</p>
               <select className="select-input" name="select" id="">
-                <option value="">{withdr[0]?.name}</option>
-                <option value="">{withdr[1]?.name}</option>
-                <option value="">{withdr[2]?.name}</option>
-                <option value="">{withdr[3]?.name}</option>
-                <option value="">{withdr[4]?.name}</option>
-                <option value="">{withdr[5]?.name}</option>
-                <option value="">{withdr[6]?.name}</option>
+                <option value="">{invoice[0].name}</option>
+                <option value="">{invoice[1].name}</option>
+                <option value="">{invoice[2].name}</option>
               </select>
               <input className="input" type="text" placeholder="amount" />
             </div>

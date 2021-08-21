@@ -1,5 +1,5 @@
-import { GET_METHODS, GET_CONVERT_CRYPTO } from './actionTypes';
-import { getMethodList } from '../services/gateway';
+import { GET_METHODS, GET_CALCULATE_CRYPTO } from './actionTypes';
+import { getMethodList, calculateCrypto } from '../services/gateway';
 
 export const getMethod = () => {
   const getMethodAction = methodList => {
@@ -12,6 +12,21 @@ export const getMethod = () => {
   return dispatch => {
     getMethodList().then(methodList => {
       dispatch(getMethodAction(methodList));
+    });
+  };
+};
+
+export const calcCrypto = () => {
+  const calculateCryptoAction = amount => {
+    return {
+      type: GET_CALCULATE_CRYPTO,
+      payload: { amount },
+    };
+  };
+
+  return dispatch => {
+    calculateCrypto().then(methodList => {
+      dispatch(calculateCryptoAction(methodList));
     });
   };
 };

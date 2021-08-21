@@ -14,3 +14,16 @@ export const getMethodList = async () => {
   }
   return response.data;
 };
+
+export const calculateCrypto = async () => {
+  const url = `${baseURL}/payMethods/calculate
+    `;
+  let response = {};
+  try {
+    response = await axios.get(url);
+  } catch (error) {
+    console.log('Failed calculate');
+    throw error;
+  }
+  return response.data;
+};
