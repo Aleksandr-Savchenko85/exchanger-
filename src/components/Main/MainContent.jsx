@@ -17,7 +17,7 @@ const MainContent = () => {
   return (
     <>
       <main className="content">
-        <h1 className="title">Main Page</h1>
+        <h1 className="title">Main super Page</h1>
         {/* <Formik initialValues={{ ...initialValues }} onSubmit={onSubmit} enableReinitialize>
           {({ setFieldValue, ...props }) => (
             <Form className="form">
